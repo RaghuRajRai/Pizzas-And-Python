@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PizzaHut</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+<style type="text/css">
+  html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url("https://franchise.pizzahut.com/wp-content/uploads/faq_lg.jpg");
+   /* Full height */
+  height: 75%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+  </head>
+
+<body>
+  <center><h1 style="font-family: 'Cookie'; float: center; text-align: center; margin-bottom: 60px; font-size: 70pt; color: #fd5f00; background-color: #f9f8eb; border-radius: 80px; width: 50%;">PizzaHut</h1></center>
+
+<div class="container text-center form-group" style="width: 100%; height: 100%;">
+
+  <form method="post" action="/addtocart/">
+
+<p style="color:red; background-color: #FFE4B5; margin: auto; font-size: 15pt; width: 50%; float: center;">{{ message }}</psty>
+
+<p style="font-size: 16pt; color: white; height: 30px;">Type</p>
+<select name="type" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+    <option value="none" selected="selected">None</option>
+<option value="veg">Veg</option>
+  <option value="nonveg">Non-Veg</option>
+</select>
+
+
+<p style="font-size: 16pt; color: white;">Size</p>
+<select name="size" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+    <option value="none" selected="selected">None</option>
+<option value="5">5 inch</option>
+  <option value="8">8 inch</option>
+  <option value="12">12 inch</option>
+</select>
+
+
+<p style="font-size: 16pt; color: white;">Toppings (If veg, first else the second)</p>
+<select name="toppings" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+    <option value="none" selected="selected">None</option>
+<option value="farmhouse">Farmhouse(Veg)/Pepperoni(Nonveg)</option>
+  <option value="paneer">Paneer(Veg)/Chicken(Nonveg)</option>
+    <option value="cheeseburst">Cheese Burst</option>
+</select>
+
+<p style="font-size: 16pt; color: white;">Sides</p>
+<select name="sides" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+  <option value="none" selected="selected">None</option>
+  <option value="wings">Chicken Wings</option>
+  <option value="bread">Garlic Bread</option>
+    <option value="burger">Burger</option>
+</select>
+
+<p style="font-size: 16pt; color: white;">Cold-drink</p>
+<select name="drink" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+    <option value="none" selected="selected">None</option>
+  <option value="pepsi">Pepsi</option>
+  <option value="sprite">Sprite</option>
+</select>
+
+<p style="font-size: 16pt; color: white;">Deserts</p>
+<select name="deserts" class="form-control" style="margin-bottom: 10px; width: 30%; margin: auto; width: 50%;">
+  <option value="none" selected="selected">None</option>
+  <option value="chocolava">ChocoLava Cake</option>
+  <option value="butterscotch">Butterscotch Moose Cake</option>
+</select></br>
+<button type="submit" class="btn btn-info" style="margin-bottom: 10px; width: 30%;">Add to Cart</button>
+  </form>
+
+<form method="post" action="/gotocart/"><button type="submit" class="btn btn-success" style="margin-bottom: 10px; width: 30%;">Go to Cart</button></form>
+
+</div>
+  </body>
+</html>
