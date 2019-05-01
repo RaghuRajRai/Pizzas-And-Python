@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PizzaHut</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+<style type="text/css">
+table, th, td {
+  border: 1px solid black;
+  background-color: #E8D6D6;
+}
+
+  html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("https://images.unsplash.com/photo-1536090219743-b4d977a0d9f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+   /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+</style>
+  </head>
+
+<body>
+  <center><h1 style="font-family: 'Cookie'; float: center; text-align: center; margin-bottom: 60px; font-size: 70pt; color: #fd5f00; background-color: #f9f8eb; border-radius: 80px; width: 50%;">PizzaHut</h1></center>
+
+<div class="container text-center" style="width: 100%; height: 100%">
+
+
+<table style="width: 100%;">
+    <tr>
+        <th>ID</th>
+        <th>Type</th>
+        <th>Size</th>
+        <th>Toppinigs</th>
+        <th>Sides</th>
+        <th>Drink</th>
+        <th>Deserts</th>
+        <th>Price</th>
+        <th>Remove</th>
+    </tr>
+
+    {% for item in Cart %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.size }}</td>
+            <td>{{ item.toppings }}</td>
+            <td>{{ item.sides }}</td>
+            <td>{{ item.drink }}</td>
+            <td>{{ item.deserts }}</td>
+            <td>{{ item.price }}</td>
+            <td><form method="post" action="/delete/"><input type="number" placeholder={{ item.id }} name="id" style="width:70px;"><button type="submit">Delete Item</button></form></td>
+        </tr>
+    {% endfor %}
+
+</table>
+
+
+
+<form method="post" action="/placeorder/"><button type="submit" class="btn btn-info" style="width: 40%; margin-top: 20px;">Place Order</button></form>
+<form method="post" action="/cancelorder/"><button type="submit" class="btn btn-danger" style="width: 40%; margin-top: 20px;">Cancel Order & Logout</button></form>
+
+</div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PizzaHut</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <style type="text/css">
+      table, th, td {
+  border: 1px solid black;
+  background-color: #E8D6D6;
+}
+  </style>
+</head>
+
+<body class="text-center">
+<div class="container-fluid" style="width: 80%;">
+<h1 style="font-style: bold;">Order Placed!</h1>
+<p1 style="font-size: 15pt; color: green; margin-top: 20px;">{{ message }}</p1></br>
+<p1 style="margin-top: 20px; font-size: 12pt; margin-bottom: 10px; color: grey;">Order Details:</p1>
+<table style="width: 100%; color: black; float: center;">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Items</th>
+        <th>Price</th>
+    </tr>
+
+    {% for order in Orders %}
+        <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.username }}</td>
+            <td>{{ order.cart }}</td>
+            <td>{{ order.price }}</td>
+            </tr>
+    {% endfor %}
+
+
+</table>
+<form method="post" action="/backtomenu/"><button type="submit" class="btn btn-success" style="width: 40%; margin-top: 30px;">Go back to Menu</button></form>
+    <form method="post" action="/logout/"><button type="submit" class="btn btn-danger" style="width: 40%; margin-top: 10px;">Logout</button></form>
+</div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PizzaHut</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+<style type="text/css">
+  html,
+body {
+  height: 100%;
+}
+
+body {
+  background-image:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+</style>
+  </head>
+
+<body>
+  <center><h1 style="font-family: 'Cookie'; float: center; text-align: center; margin-bottom: 60px; font-size: 70pt; color: #fd5f00; background-color: #f9f8eb; border-radius: 80px; width: 50%;">PizzaHut</h1></center>
+<div class="container" style="width: 100%; height: 100%">
+  <div class="row">
+
+    <div class="col-sm-6" style="height: 500px;">
+      <form class="form-signin" action="/signup/" method="post" style="width: 100%;">
+<p style="color: red; margin-top: 30px;  font-size: 15pt; background-color: yellow;">{{ message_signup }}</p>
+      <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Sign Up</h1>
+      <label for="inputNameSU" class="sr-only">Name</label>
+      <input type="text" id="inputNameSU" class="form-control" name="nameSU" placeholder="Username" required autofocus>
+      <label for="inputEmailSU" class="sr-only">Username</label>
+      <input type="text" id="inputEmailSU" class="form-control" name="emailSU" placeholder="Email address" required autofocus>
+      <label for="inputPasswordSU" class="sr-only">Password</label>
+      <input type="password" id="inputPasswordSU" name="passwordSU" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-success btn-block" type="submit">Sign Up</button>
+    </form>
+    </div>
+
+
+    <div class="col-sm-6" style="height: 500px;">
+
+
+    <form class="form-signin" action="/signin/" method="post" style="width: 100%;">
+<p style="color: red; margin-top: 30px; font-size: 15pt; background-color: yellow;">{{ message_signin }}</p>
+      <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Sign in</h1>
+      <label for="inputEmailSI" class="sr-only">Username</label>
+      <input type="text" id="inputEmailSI" class="form-control" name="nameSI" placeholder="Username" required autofocus>
+      <label for="inputPasswordSI" class="sr-only">Password</label>
+      <input type="password" id="inputPasswordSI" name="passwordSI" class="form-control" placeholder="Password" required>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    </form>
+
+
+
+    </div>
+  </div>
+</div>
+  </body>
+</html>
